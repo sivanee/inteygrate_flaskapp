@@ -3,14 +3,14 @@ from flask import request
 
 #WA[
 from whatsapp import Client
-expected_token = 'SOME SECRET TOKEN OF YOUR CHOICE'
+expected_token = 'fOaoY18Z8UpTI+XT+4P1dyUfF4I='
 #]WA
 
 app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/')ssssss
 def hello_world():
 
     return 'Hello World!'
@@ -26,7 +26,7 @@ def sendmsg():
     msg = request.args.get('msg')
     token = request.args.get('token')
     if(str(token) == expected_token):
-        client = Client(login='YOUR REGISTERED PHONE NUMBER WITH COUNTRY CODE', password='PASSWORD FROM REGISTRATION')
+        client = Client(login='919439475972', password='ZpEHNPzY+b1tyfAaSFeP0Yrmpiw=')
         res = client.send_message(to, msg)  
     
     else:
