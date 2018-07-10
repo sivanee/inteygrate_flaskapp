@@ -14,13 +14,13 @@ except IOError:
 # IMPORTANT: Put any additional includes below this line.  If placed above this
 # line, it's possible required libraries won't be in your searchable path
 #
-
+@app.route('/')
 from flaskapp import app as application
 
 #
 # Below for testing only
 #
-@app.route('/')
+
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
     ip = os.environ['OPENSHIFT_PYTHON_IP']
