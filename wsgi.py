@@ -26,7 +26,7 @@ if __name__ == '__main__':
     ip = os.environ['OPENSHIFT_PYTHON_IP']
     port = int(os.environ['OPENSHIFT_PYTHON_PORT'])
     #host_name = os.environ['OPENSHIFT_GEAR_DNS']
-    httpd = make_server(ip, 8000, application)
+    httpd = make_server(ip, 8080, application)
     #httpd = make_server('localhost', 8051, application)
     # Wait for a single request, serve it and quit.
     httpd.handle_request()
