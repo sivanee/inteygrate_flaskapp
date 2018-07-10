@@ -1,11 +1,11 @@
 #!/usr/bin/python
-activate_this = '/opt/app-root/lib64/python3.6/os.py'
+#activate_this = '/opt/app-root/lib64/python3.6/os.py'
 #execfile(activate_this, dict(__file__=activate_this))
 import os
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 #virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
-virtualenv = os.path.join(virtenv, 'activate_this')
+virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     execfile(virtualenv, dict(__file__=virtualenv))
 except IOError:
@@ -14,7 +14,7 @@ except IOError:
 # IMPORTANT: Put any additional includes below this line.  If placed above this
 # line, it's possible required libraries won't be in your searchable path
 #
-@app.route('/')
+
 from flaskapp import app as application
 
 #
