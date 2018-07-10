@@ -20,6 +20,7 @@ from flaskapp import app as application
 #
 # Below for testing only
 #
+@app.route('/')
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
     ip = os.environ['OPENSHIFT_PYTHON_IP']
