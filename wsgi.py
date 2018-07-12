@@ -6,7 +6,7 @@ import os
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 #virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
-virtualenv = os.path.join(virtenv, 'C:\Users\dell\AppData\Local\Programs\Python\Python37\activate_this.py')
+virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     execfile(virtualenv, dict(__file__=virtualenv))
 except IOError:
