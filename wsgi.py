@@ -2,10 +2,10 @@
 
 #activate_this = '/opt/app-root/lib64/python3.6/os.py'
 #execfile(activate_this, dict(__file__=activate_this))
-import os,sys
-sys.path.append(os.path.join(os.environ['OPENSHIFT_PYTHON_DIR']))
+import os
+#sys.path.append(os.path.join(os.environ['OPENSHIFT_PYTHON_DIR']))
 
-os.environ['PYTHON_SETTINGS_MODULE'] = 'mywhatsapp.settings'
+#os.environ['PYTHON_SETTINGS_MODULE'] = 'mywhatsapp.settings'
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 #virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
