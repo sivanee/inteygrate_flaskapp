@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#activate_this = '/opt/app-root/lib64/python3.6/os.py'
+#activate_this = '/AppData/Local/Programs/Python/Python37/Lib/os.py'
 #execfile(activate_this, dict(__file__=activate_this))
 import os
 #sys.path.append(os.path.join(os.environ['OPENSHIFT_PYTHON_DIR']))
@@ -9,7 +9,7 @@ import os
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 #virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
-virtualenv = os.path.join(virtenv, '/AppData/Local/Programs/Python/Python37/Lib/site-packages/activate_this.py')
+virtualenv = os.path.join(virtenv, 'AppData/Local/Programs/Python/Python37/Lib/activate_this.py')
 try:
     execfile(virtualenv, dict(__file__=virtualenv))
 except IOError:
