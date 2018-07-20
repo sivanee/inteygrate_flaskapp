@@ -1,17 +1,19 @@
 #!/usr/bin/python
 
-#activate_this = '/AppData/Local/Programs/Python/Python37/Lib/os.py'
-#execfile(activate_this, dict(__file__=activate_this))
+
 import os
+activate_this = '/AppData/Local/Programs/Python/Python37/Lib/os.py'
+
 #sys.path.append(os.path.join(os.environ['OPENSHIFT_PYTHON_DIR']))
 
 #os.environ['PYTHON_SETTINGS_MODULE'] = 'mywhatsapp.settings'
 
-virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
-#virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
-virtualenv = os.path.join(virtenv, 'AppData/Local/Programs/Python/Python37/Lib/activate_this.py')
+#virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
+virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
+virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
-    execfile(virtualenv, dict(__file__=virtualenv))
+    execfile(activate_this, dict(__file__=activate_this))
+    #execfile(virtualenv, dict(__file__=virtualenv))
 except IOError:
     pass
 #
