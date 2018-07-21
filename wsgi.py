@@ -8,8 +8,8 @@ import os
 
 #os.environ['PYTHON_SETTINGS_MODULE'] = 'mywhatsapp.settings'
 
-virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
-#virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
+#virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
+virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
 virtualenv = os.path.join(virtenv, 'Scripts/activate_this.py')
 try:
     #execfile(activate_this, dict(__file__=activate_this))
